@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD API</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="text-center">CRUD</h1>
+
+    <!-- Create Form -->
+    <div class="card">
+        <div class="card-header">Tambah </div>
+        <div class="card-body">
+            <form id="createForm">
+                <div class="form-group">
+                    <label for="id_kary">ID Karyawan</label>
+                    <input type="text" id="idKary" class="form-control" placeholder="Enter ID Karyawan" required>
+                </div>
+                <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nama" class="form-control" placeholder="Enter Nama" required>
+                </div>
+                <div class="form-group">
+                    <label for="kehadiran">Kehadiran</label>
+                    <input type="number" id="kehadiran" class="form-control" placeholder="Enter Nilai Kehadiran (1-5)" required>
+                </div>
+                <div class="form-group">
+                    <label for="jumlah_kinerjaCrud">Hasil Kerja</label>
+                    <input type="number" id="jumlah_kinerjaCrud" class="form-control" placeholder="Enter Nilai Hasil Kerja (1-5)" required>
+                </div>
+                <div class="form-group">
+                    <label for="inisiatif">Inisiatif</label>
+                    <input type="number" id="inisiatif" class="form-control" placeholder="Enter Nilai Inisiatif (1-5)" required>
+                </div>
+                <div class="form-group">
+                    <label for="team_work">Teamwork</label>
+                    <input type="number" id="team_work" class="form-control" placeholder="Enter Nilai Teamwork (1-5)" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Tambah</button>
+            </form>
+        </div>        
+    </div>
+
+    <!-- Table to Display Data -->
+    <div class="mt-4">
+        <h2 class="text-center">List</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>id karyawan</th>
+                    <th>Nama</th>
+                    <th>kehadiran</th>
+                    <th>hasil kerja</th>
+                    <th>inisiatif </th>
+                    <th>Teamwork</th>
+                    <th>penilaian</th>
+                </tr>
+            </thead>
+            <tbody id="mahasiswaTable">
+                <!-- Data will be inserted here -->
+            </tbody>
+        </table>
+        <div class="text-center mt-3">
+            <button onclick="printTable()" class="btn btn-secondary">Cetak List</button>
+        </div>
+        
+    </div>
+</div>
+
+<script src="crud.js"></script>
+</body>
+</html>
